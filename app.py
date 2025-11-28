@@ -58,8 +58,7 @@ if uploaded_file is not None:
             st.warning(f"Sheet 'Portfolios' not found. Using first sheet: {sheet_names[0]}")
             df = pd.read_excel(uploaded_file, sheet_name=sheet_names[0])
 
-        st.write("### Raw Data Preview")
-        st.dataframe(df.head())
+
 
         summary, summary_display, error = process_data(df)
 
